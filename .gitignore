@@ -1,0 +1,12 @@
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Compilados
+bin/
+out/
+*.class
+
+# Logs
+*.log
