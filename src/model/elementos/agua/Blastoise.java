@@ -14,14 +14,12 @@ public class Blastoise extends Agua {
         configurarEstagio(this.estagio);
     }
 
-    public String evoluir() {
-        String nomePokemon = getNome();
+    @Override
+    public void evoluir() {
         if (this.estagio < 2) {
             this.estagio++;
             configurarEstagio(this.estagio);
-            return nomePokemon + " evoluiu para " + getNome() + "!";
         }
-        return null;
     }
 
     private void configurarEstagio(int estagio) {
@@ -59,14 +57,8 @@ public class Blastoise extends Agua {
         setVida(getVidaMax());
     }
 
+    @Override
     public List<Ataque> getAtaques() {
         return ataques;
     }
-
-    public int realizarAtaque(int index) {
-        Ataque escolhido = ataques.get(index);
-        setElemento(escolhido.getElemento());
-        return escolhido.getDano();
-    }
-
 }

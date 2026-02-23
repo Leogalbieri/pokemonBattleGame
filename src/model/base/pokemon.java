@@ -18,7 +18,7 @@ public abstract class Pokemon {
         this.vidaMax = vidaMax;
     }
 
-    public abstract String evoluir();
+    public abstract void evoluir();
     public abstract List<Ataque> getAtaques();
     public abstract List<String> fraquezas();
     public abstract List<String> resistencias();
